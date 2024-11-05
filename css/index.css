@@ -14,6 +14,8 @@
     --white: #FFFFFF;
     --half-half-white: #FFFFFF50;
     --half-white: #FFFFFF80;
+    --gray: #6F6F6F;
+
 }
 
 header {
@@ -57,3 +59,106 @@ header {
 
     }
 }
+
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 100px;
+    & h1{
+        color: var(--gray);
+    }
+    & .box{
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        gap: 10px;
+        background-color: var(--pink);
+        width: 161px;
+        height: 46px;
+        border-radius: 5px;
+        & h3{
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--white);
+            line-height: 28px;
+        }
+        & span{
+            background-color: #ED107A;
+            color: #FFFFFF;
+        }
+        }
+    }
+    
+    .container{
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+        padding: 36px 100px;
+        & .item{
+            flex: 1;
+            width: 318px;
+            height: 163px;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px #00000005;
+            padding: 15px 15px;
+            & .data{
+                display: flex;
+                justify-content: space-between;
+                padding: 50px 5px;
+                
+            }
+            & p{
+                color: #808080;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & h3{
+                color: #2D2D2D;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            & h5{
+                color: #2D2D2D;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 18px;
+            }
+        }
+        & .item2{
+            flex: 1;
+            width: 318px;
+            height: 163px;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px #ED107A20;
+            padding: 15px 15px;
+            & .data{
+                display: flex;
+                justify-content: space-between;
+                padding: 50px 5px;
+                & #caneta{
+                    
+                }
+                
+            }
+            & p{
+                color: #808080;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & h3{
+                color: #2D2D2D;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            & h5{
+                color: #2D2D2D;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 18px;
+            }
+        }
+    }
