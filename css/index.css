@@ -18,7 +18,32 @@
 
 }
 
+.dark-mode{
+    --cor-fundo: rgba(0, 0, 0, 0.898);
+    --cor-cinza: #575757;
+    --cor-cinza-claro: #C3C3C3;
+  }
+
+  body{
+    background-color: var(--cor-fundo);
+    .inicio > .tarefas {
+        & h1{
+            color: var(--cor-cinza-claro);
+        }
+    }
+    .container > .item{
+        background-color: var(--cor-cinza);
+        & h3{
+            color: var(--cor-cinza-claro);
+        }
+        & h5{
+            color: var(--cor-cinza-claro);
+        }
+    }
+  }
+
 header {
+    width: 100%;
     background-color: var(--pink);
     padding: 16px 100px;
     display: flex;
@@ -58,15 +83,23 @@ header {
         }
 
     }
+    & button{
+        background-color: var(--pink);
+        color: var(--white);
+    }
+    & #light_mode:hover{
+        cursor: pointer;
+    }
 }
 
 .inicio{
     display: flex;
     justify-content: space-between;
     padding: 36px 100px;
-    & h1{
+    & .tarefas{
         color: var(--gray);
     }
+    
     & .box{
         display: flex;
         align-items: center;
@@ -87,6 +120,9 @@ header {
             color: #FFFFFF;
         }
         }
+    & .box:hover{
+        cursor: pointer;
+    }
     }
     
     .container{
@@ -126,39 +162,72 @@ header {
                 line-height: 18px;
             }
         }
-        & .item2{
-            flex: 1;
-            width: 318px;
-            height: 163px;
-            border-radius: 5px;
+
+        & .item:hover{
             box-shadow: 0px 5px 10px #ED107A20;
-            padding: 15px 15px;
-            & .data{
-                display: flex;
-                justify-content: space-between;
-                padding: 50px 5px;
-                & #caneta{
-                    
+            cursor: pointer;
+            & #delete{
+                color: var(--pink);
+            }
+        }
+    }
+
+    @media only screen and ( max-width: 1024px ){
+        header {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    @media only screen and ( max-width: 600px ) {
+        header {
+            padding: 40px 100px;
+            /* & h1 {
+                position: absolute;
+                left: 10px;
+            } */
+
+            & .pesquisa{
+                & input{
+                    display: none;
                 }
-                
+                /* & span{
+                    position: absolute;
+                    right: 50px;
+                }    */
+            /* }
+
+            & button{
+                position: absolute;
+                right: 10px;
+            } */
+
+        }
+        
+        .inicio{
+            .box{
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+                box-shadow: 0px 4px 4px 0px #00000025;
+                position: fixed;
+                bottom: 20px;
+                right: 50px;
+                h3{
+                    display: none;
+                }
             }
-            & p{
-                color: #808080;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 18px;
+            .tarefas{
+                position: absolute;
+                left: 20px;
             }
-            & h3{
-                color: #2D2D2D;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 18px;
-            }
-            & h5{
-                color: #2D2D2D;
-                font-weight: 700;
-                font-size: 10px;
-                line-height: 18px;
+        }
+        .container{
+            padding-left: 20px;
+            display: grid;
+            & .item{
+                width: 535px;
+                height: 200px;
             }
         }
     }

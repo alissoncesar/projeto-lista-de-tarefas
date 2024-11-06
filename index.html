@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="script.js"> -->
 </head>
 
 <body>
@@ -22,9 +23,11 @@
                 search
             </span>
         </div>
-        <span class="material-symbols-outlined">
+        <button class="material-symbols-outlined" id="light_mode">
             light_mode
-        </span>
+        </button>
+        <div id="fundo"></div>
+        <script src="script.js"></script>
     </header>
 
     <div class="inicio">
@@ -49,22 +52,7 @@
                     <span class="material-symbols-outlined">
                         stylus
                     </span>
-                    <span class="material-symbols-outlined">
-                        delete
-                    </span>
-                </span>
-            </div>
-        </div>
-        <div class="item2">
-            <h3>Título da tarefa</h3>
-            <p>Lorem ipsum dolor sit amet <br> consectetur. Sed et urna mi tellus</p>
-            <div class="data">
-                <h5><strong>24/07/2024</strong></h5>
-                <span>
-                    <span class="material-symbols-outlined">
-                        stylus
-                    </span>
-                    <span class="material-symbols-outlined" style="color: #ED107A;">
+                    <span class="material-symbols-outlined" id="delete">
                         delete
                     </span>
                 </span>
@@ -79,7 +67,7 @@
                     <span class="material-symbols-outlined">
                         stylus
                     </span>
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined" id="delete">
                         delete
                     </span>
                 </span>
@@ -94,7 +82,22 @@
                     <span class="material-symbols-outlined">
                         stylus
                     </span>
+                    <span class="material-symbols-outlined" id="delete">
+                        delete
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <h3>Título da tarefa</h3>
+            <p>Lorem ipsum dolor sit amet <br> consectetur. Sed et urna mi tellus</p>
+            <div class="data">
+                <h5><strong>24/07/2024</strong></h5>
+                <span>
                     <span class="material-symbols-outlined">
+                        stylus
+                    </span>
+                    <span class="material-symbols-outlined" id="delete">
                         delete
                     </span>
                 </span>
